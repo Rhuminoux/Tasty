@@ -1,0 +1,24 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Boutton_Recette : MonoBehaviour {
+
+    private Button button;
+    public GameObject list;
+
+	// Use this for initialization
+	void Start () {
+        button = this.GetComponent<Button>();
+        button.onClick.AddListener(listAppear);
+	}
+	
+    void listAppear()
+    {
+        if (list.active)
+            list.SetActive(false);
+        else
+            list.SetActive(true);
+    }
+}
